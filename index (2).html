@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les 8 Distorsions Cognitives de la Jalousie - Lidy Williams</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(220, 20, 60, 0.1) 100%);
+            border-radius: 15px;
+            border: 2px solid #D4AF37;
+            box-shadow: 0 5px 20px rgba(212, 175, 55, 0.2);
+        }
+
+        .logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #D4AF37;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            color: #ffffff;
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        .intro {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #DC143C;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            flex: 1;
+            min-width: 150px;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+
+        .tab-button:hover {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .tab-button.active {
+            background: #D4AF37;
+            color: #000000;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .distortion-list {
+            display: grid;
+            gap: 20px;
+        }
+
+        .distortion-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #D4AF37;
+            transition: all 0.3s;
+        }
+
+        .distortion-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(5px);
+        }
+
+        .distortion-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #DC143C 0%, #FF4444 100%);
+            color: #ffffff;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+            font-weight: bold;
+            margin-right: 15px;
+            box-shadow: 0 3px 10px rgba(220, 20, 60, 0.4);
+        }
+
+        .distortion-title {
+            color: #DC143C;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            text-shadow: 2px 2px 4px rgba(220, 20, 60, 0.3);
+        }
+
+        .distortion-content {
+            margin-left: 50px;
+        }
+
+        .definition {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .examples {
+            background: rgba(255, 0, 0, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        .examples-title {
+            color: #ff4444;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .example-item {
+            color: #ffcccc;
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .example-item:before {
+            content: "❌";
+            position: absolute;
+            left: 0;
+        }
+
+        .reformulation {
+            background: rgba(0, 255, 0, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .reformulation-title {
+            color: #44ff44;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .reformulation-text {
+            color: #ccffcc;
+            font-style: italic;
+        }
+
+        .exercise-section {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .step {
+            margin-bottom: 30px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #D4AF37;
+            color: #000000;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-right: 15px;
+        }
+
+        .step-title {
+            color: #D4AF37;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 120px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid #D4AF37;
+            border-radius: 8px;
+            color: #ffffff;
+            font-size: 1em;
+            font-family: inherit;
+            resize: vertical;
+        }
+
+        textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .distortion-select {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .distortion-option {
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid #D4AF37;
+            border-radius: 8px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .distortion-option:hover {
+            background: rgba(212, 175, 55, 0.2);
+            transform: scale(1.05);
+        }
+
+        .distortion-option.selected {
+            background: #D4AF37;
+            color: #000000;
+            font-weight: bold;
+        }
+
+        .button {
+            background: #D4AF37;
+            color: #000000;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.1em;
+            font-weight: bold;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .button:hover {
+            background: #f4cf67;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .button:disabled {
+            background: #666666;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .result-box {
+            background: rgba(0, 255, 0, 0.1);
+            border: 2px solid #44ff44;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .result-box.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        .result-title {
+            color: #44ff44;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .saved-reformulations {
+            margin-top: 30px;
+        }
+
+        .saved-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #D4AF37;
+        }
+
+        .saved-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .saved-date {
+            color: #D4AF37;
+            font-size: 0.9em;
+        }
+
+        .delete-btn {
+            background: linear-gradient(135deg, #DC143C 0%, #FF4444 100%);
+            color: #ffffff;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            box-shadow: 0 2px 5px rgba(220, 20, 60, 0.3);
+        }
+
+        .delete-btn:hover {
+            background: linear-gradient(135deg, #FF4444 0%, #FF6666 100%);
+            box-shadow: 0 3px 10px rgba(220, 20, 60, 0.5);
+        }
+
+        .saved-thought {
+            color: #ffcccc;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .saved-distortion {
+            color: #D4AF37;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .saved-reformulation {
+            color: #ccffcc;
+            padding: 15px;
+            background: rgba(0, 255, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 40px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .tab-button {
+                min-width: 100%;
+            }
+
+            .distortion-select {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧠 Les 8 Distorsions Cognitives</h1>
+            <div class="subtitle">Transformez vos pensées toxiques en pensées réalistes</div>
+        </div>
+
+        <div class="intro">
+            <p><strong>💡 Pendant une crise de jalousie, votre cerveau génère des pensées automatiques.</strong></p>
+            <p style="margin-top: 10px;">Ces pensées ne sont PAS la vérité. Ce sont des distorsions cognitives créées par votre amygdale en mode panique.</p>
+            <p style="margin-top: 10px;">Cet outil vous aide à identifier ces distorsions et à les reformuler de façon réaliste.</p>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab('learn')">📚 Apprendre les 8 distorsions</button>
+            <button class="tab-button" onclick="switchTab('practice')">✍️ Pratiquer</button>
+            <button class="tab-button" onclick="switchTab('saved')">💾 Mes reformulations</button>
+        </div>
+
+        <div id="learn-tab" class="tab-content active">
+            <div class="distortion-list" id="distortion-list"></div>
+        </div>
+
+        <div id="practice-tab" class="tab-content">
+            <div class="exercise-section">
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">1</span>
+                        Écrivez votre pensée automatique
+                    </div>
+                    <textarea id="thought-input" placeholder="Exemple: 'Il va me quitter pour elle...'"></textarea>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">2</span>
+                        Identifiez la distorsion cognitive
+                    </div>
+                    <div class="distortion-select" id="distortion-select"></div>
+                </div>
+
+                <div class="step">
+                    <div class="step-title">
+                        <span class="step-number">3</span>
+                        Reformulez de façon réaliste
+                    </div>
+                    <textarea id="reformulation-input" placeholder="Reformulez votre pensée en tenant compte de la réalité..."></textarea>
+                </div>
+
+                <button class="button" onclick="saveReformulation()">💾 Sauvegarder ma reformulation</button>
+
+                <div id="result-box" class="result-box">
+                    <div class="result-title">✅ Reformulation sauvegardée!</div>
+                    <p>Votre reformulation a été ajoutée à votre bibliothèque. Vous pouvez la consulter dans l'onglet "Mes reformulations".</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="saved-tab" class="tab-content">
+            <div class="saved-reformulations" id="saved-list"></div>
+        </div>
+    </div>
+
+    <script>
+        const distortions = [
+            {
+                number: 1,
+                name: "Catastrophisation",
+                definition: "Sauter immédiatement au pire scénario possible.",
+                examples: [
+                    "Il/elle va me quitter pour l'autre.",
+                    "Je vais finir seul(e).",
+                    "C'est le début de la fin de notre relation."
+                ],
+                reformulation: "Mon/ma partenaire a une autre connexion. Cela ne signifie pas automatiquement qu'il/elle va me quitter. Nous avons des accords. Il/elle me choisit activement."
+            },
+            {
+                number: 2,
+                name: "Lecture de pensées",
+                definition: "Prétendre savoir ce que votre partenaire pense sans vérification.",
+                examples: [
+                    "Il/elle pense que l'autre est mieux que moi.",
+                    "Il/elle regrette d'être avec moi.",
+                    "Il/elle préfère l'autre."
+                ],
+                reformulation: "Je ne sais pas ce que mon/ma partenaire pense. Je vais lui demander comment il/elle se sent."
+            },
+            {
+                number: 3,
+                name: "Surgénéralisation",
+                definition: "Prendre un événement isolé et le transformer en pattern permanent.",
+                examples: [
+                    "Il/elle a annulé nos plans une fois → Il/elle ne me priorise JAMAIS.",
+                    "Il/elle a eu l'air distant(e) ce matin → Notre relation est FINIE."
+                ],
+                reformulation: "Mon/ma partenaire a annulé nos plans cette fois. C'est frustrant, mais ce n'est pas représentatif de toute notre relation."
+            },
+            {
+                number: 4,
+                name: "Pensée noire et blanche",
+                definition: "Voir les choses de façon binaire, sans nuance.",
+                examples: [
+                    "Soit il/elle m'aime exclusivement, soit il/elle ne m'aime pas du tout.",
+                    "Soit je suis la/le meilleur(e), soit je ne vaux rien."
+                ],
+                reformulation: "Mon/ma partenaire peut aimer plusieurs personnes en même temps, de façons uniques et complémentaires."
+            },
+            {
+                number: 5,
+                name: "Filtrage négatif",
+                definition: "Ne voir QUE les aspects négatifs, ignorer les positifs.",
+                examples: [
+                    "Il/elle passe 5 soirs avec moi et 2 soirs avec quelqu'un d'autre → Je ne vois que les 2 soirs ailleurs.",
+                    "Il/elle me dit 'je t'aime' tous les jours, mais le dit aussi à quelqu'un d'autre → Je ne retiens que le fait qu'il/elle le dit à quelqu'un d'autre."
+                ],
+                reformulation: "Mon/ma partenaire passe 5 soirs sur 7 avec moi. C'est la majorité de son temps. Notre lien est solide."
+            },
+            {
+                number: 6,
+                name: "Personnalisation",
+                definition: "Tout ramener à vous, même ce qui n'a rien à voir.",
+                examples: [
+                    "Si j'étais assez [belle/drôle/sexy], il/elle n'aurait pas besoin de quelqu'un d'autre.",
+                    "C'est de ma faute si il/elle explore."
+                ],
+                reformulation: "Mon/ma partenaire a choisi le couple ouvert parce qu'il/elle aime la diversité relationnelle. Ce n'est pas parce que je manque de quelque chose."
+            },
+            {
+                number: 7,
+                name: "Devrait / Il faut",
+                definition: "Imposer des règles rigides basées sur la culture monogame.",
+                examples: [
+                    "Il/elle DEVRAIT me donner toute son attention.",
+                    "Il/elle ne DEVRAIT PAS aimer quelqu'un d'autre.",
+                    "Je DEVRAIS être assez."
+                ],
+                reformulation: "Dans notre couple ouvert, nous avons des accords différents des normes culturelles. Ce qui compte, c'est ce que NOUS avons décidé ensemble."
+            },
+            {
+                number: 8,
+                name: "Prédiction négative",
+                definition: "Prédire le futur de façon catastrophique.",
+                examples: [
+                    "Ça ne marchera jamais.",
+                    "Il/elle va forcément me quitter un jour.",
+                    "Notre relation est condamnée."
+                ],
+                reformulation: "Je ne sais pas ce que le futur nous réserve. Pour l'instant, nous sommes ensemble et nous travaillons sur notre relation."
+            }
+        ];
+
+        let selectedDistortion = null;
+
+        function init() {
+            renderDistortionList();
+            renderDistortionSelect();
+            loadSavedReformulations();
+        }
+
+        function renderDistortionList() {
+            const container = document.getElementById("distortion-list");
+            container.innerHTML = distortions.map(d => `
+                <div class="distortion-card">
+                    <div class="distortion-title">
+                        <span class="distortion-number">${d.number}</span>
+                        ${d.name.toUpperCase()}
+                    </div>
+                    <div class="distortion-content">
+                        <div class="definition">${d.definition}</div>
+                        <div class="examples">
+                            <div class="examples-title">❌ Exemples de pensées toxiques:</div>
+                            ${d.examples.map(ex => `<div class="example-item">${ex}</div>`).join("")}
+                        </div>
+                        <div class="reformulation">
+                            <div class="reformulation-title">✅ Reformulation réaliste:</div>
+                            <div class="reformulation-text">"${d.reformulation}"</div>
+                        </div>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function renderDistortionSelect() {
+            const container = document.getElementById("distortion-select");
+            container.innerHTML = distortions.map(d => `
+                <div class="distortion-option" onclick="selectDistortion(${d.number})">
+                    ${d.number}. ${d.name}
+                </div>
+            `).join("");
+        }
+
+        function selectDistortion(number) {
+            selectedDistortion = number;
+            const options = document.querySelectorAll(".distortion-option");
+            options.forEach((option, index) => {
+                if (index === number - 1) {
+                    option.classList.add("selected");
+                } else {
+                    option.classList.remove("selected");
+                }
+            });
+        }
+
+        function switchTab(tabName) {
+            const tabs = document.querySelectorAll(".tab-content");
+            const buttons = document.querySelectorAll(".tab-button");
+            
+            tabs.forEach(tab => tab.classList.remove("active"));
+            buttons.forEach(btn => btn.classList.remove("active"));
+            
+            document.getElementById(tabName + "-tab").classList.add("active");
+            event.target.classList.add("active");
+
+            if (tabName === "saved") {
+                loadSavedReformulations();
+            }
+        }
+
+        function saveReformulation() {
+            const thought = document.getElementById("thought-input").value.trim();
+            const reformulation = document.getElementById("reformulation-input").value.trim();
+
+            if (!thought) {
+                alert("Veuillez écrire votre pensée automatique.");
+                return;
+            }
+
+            if (!selectedDistortion) {
+                alert("Veuillez sélectionner une distorsion cognitive.");
+                return;
+            }
+
+            if (!reformulation) {
+                alert("Veuillez écrire votre reformulation.");
+                return;
+            }
+
+            const distortion = distortions[selectedDistortion - 1];
+            const reformulationData = {
+                id: Date.now(),
+                date: new Date().toLocaleDateString("fr-FR", { 
+                    year: "numeric", 
+                    month: "long", 
+                    day: "numeric",
+                    hour: "2-digit",
+                    minute: "2-digit"
+                }),
+                thought: thought,
+                distortion: distortion.name,
+                reformulation: reformulation
+            };
+
+            let saved = JSON.parse(localStorage.getItem("reformulations") || "[]");
+            saved.unshift(reformulationData);
+            localStorage.setItem("reformulations", JSON.stringify(saved));
+
+            document.getElementById("result-box").classList.add("show");
+            setTimeout(() => {
+                document.getElementById("result-box").classList.remove("show");
+            }, 3000);
+
+            document.getElementById("thought-input").value = "";
+            document.getElementById("reformulation-input").value = "";
+            selectedDistortion = null;
+            renderDistortionSelect();
+        }
+
+        function loadSavedReformulations() {
+            const container = document.getElementById("saved-list");
+            const saved = JSON.parse(localStorage.getItem("reformulations") || "[]");
+
+            if (saved.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <p>Vous n'avez pas encore de reformulations sauvegardées.</p>
+                        <p style="margin-top: 10px;">Utilisez l'onglet "Pratiquer" pour créer vos premières reformulations.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = saved.map(item => `
+                <div class="saved-item">
+                    <div class="saved-header">
+                        <span class="saved-date">${item.date}</span>
+                        <button class="delete-btn" onclick="deleteReformulation(${item.id})">🗑️ Supprimer</button>
+                    </div>
+                    <div class="saved-thought">❌ Pensée toxique: "${item.thought}"</div>
+                    <div class="saved-distortion">🧠 Distorsion: ${item.distortion}</div>
+                    <div class="saved-reformulation">✅ Reformulation: "${item.reformulation}"</div>
+                </div>
+            `).join("");
+        }
+
+        function deleteReformulation(id) {
+            if (!confirm("Voulez-vous vraiment supprimer cette reformulation?")) {
+                return;
+            }
+
+            let saved = JSON.parse(localStorage.getItem("reformulations") || "[]");
+            saved = saved.filter(item => item.id !== id);
+            localStorage.setItem("reformulations", JSON.stringify(saved));
+            loadSavedReformulations();
+        }
+
+        init();
+    </script>
+</body>
+</html>
